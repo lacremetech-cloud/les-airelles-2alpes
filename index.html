@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Les Airelles aux 2 Alpes — Appartements neufs place de Venosc, à 200 m des pistes</title>
+<meta name="description" content="L'ancien hôtel de la place de Venosc devient une résidence de 11 appartements neufs, à 200 m des remontées des 2 Alpes. 9 disponibles, de 525 000 € à 1 255 000 € HT, TVA récupérable. Téléchargez le dossier : 3D, plans, prix, simulation de TVA." />
+<meta name="theme-color" content="#0E141C" />
+
+<link rel="alternate" hreflang="fr" href="https://les-airelles-2alpes.vercel.app/" />
+<link rel="alternate" hreflang="en" href="https://les-airelles-2alpes.vercel.app/en/" />
+<link rel="alternate" hreflang="x-default" href="https://les-airelles-2alpes.vercel.app/" />
+
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:title" content="Les Airelles aux 2 Alpes — 9 appartements neufs à 200 m des pistes" />
+<meta property="og:description" content="Place de Venosc, cœur historique des 2 Alpes. De 525 000 € à 1 255 000 € HT, TVA récupérable. Dossier complet : 3D, plans, prix, simulation de TVA." />
+<meta property="og:image" content="https://les-airelles-2alpes.vercel.app/assets/img/facade-nuit-1920.webp" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<script>
+/* Langue : l'URL prime toujours.
+   Cette page est la version française (racine). On ne redirige vers /en/ que
+   si la visite n'est PAS un clic publicitaire (pas de utm_, fbclid, gclid…),
+   que le visiteur n'a pas choisi le français à la main, et que son navigateur
+   n'est pas en français. /en/ ne redirige jamais. */
+(function () {
+  try {
+    var q = location.search;
+    if (/[?&](utm_[a-z]+|fbclid|gclid|gbraid|wbraid|ttclid|msclkid|li_fat_id)=/i.test(q)) return;
+    var saved = localStorage.getItem('langChoice');
+    if (saved === 'fr') return;
+    if (saved === 'en') { location.replace('/en/' + q + location.hash); return; }
+    var langs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ''];
+    if (String(langs[0]).toLowerCase().indexOf('fr') !== 0 && langs[0]) location.replace('/en/' + q + location.hash);
+  } catch (e) {}
+})();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preload" as="image" href="/assets/img/facade-nuit-828.webp" media="(max-width: 768px)" fetchpriority="high" />
+<link rel="preload" as="image" href="/assets/img/facade-nuit-1920.webp" media="(min-width: 769px)" fetchpriority="high" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/styles.css" />
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+
+<!-- ============== NAVIGATION ============== -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#top" class="nav__brand" aria-label="Les Airelles aux 2 Alpes">
+      <strong>LES AIRELLES</strong>
+      <small>Aux 2 Alpes</small>
+    </a>
+    <nav class="nav__links" aria-label="Navigation principale">
+      <a href="#programme">Le programme</a>
+      <a href="#appartements">Les appartements</a>
+      <a href="#investir">Investir</a>
+      <a href="#station">La station</a>
+    </nav>
+    <div class="nav__lang" aria-label="Langue">
+      <a href="/" class="is-active" lang="fr" hreflang="fr" aria-current="true" data-lang="fr">FR</a>
+      <a href="/en/" lang="en" hreflang="en" data-lang="en">EN</a>
+    </div>
+    <button class="btn nav__cta js-open-dossier" type="button">Le dossier</button>
+    <button class="nav__burger" id="navBurger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navMobile"><span></span><span></span></button>
+  </div>
+  <nav class="nav__mobile" id="navMobile" aria-label="Navigation mobile">
+    <a href="#programme">Le programme</a>
+    <a href="#appartements">Les appartements</a>
+    <a href="#investir">Investir</a>
+    <a href="#station">La station</a>
+    <div class="nav__lang">
+      <a href="/" class="is-active" lang="fr" hreflang="fr" aria-current="true" data-lang="fr">Français</a>
+      <a href="/en/" lang="en" hreflang="en" data-lang="en">English</a>
+    </div>
+    <button class="btn js-open-dossier" type="button">Télécharger le dossier</button>
+  </nav>
+</header>
+
+<main id="top">
+
+<!-- ============== ACCUEIL ============== -->
+<section class="hero" id="hero" data-video="Dcn_sYR1NRM">
+  <div class="hero__media">
+    <img class="hero__poster"
+      src="/assets/img/facade-nuit-1280.webp"
+      srcset="/assets/img/facade-nuit-828.webp 828w, /assets/img/facade-nuit-1280.webp 1280w, /assets/img/facade-nuit-1920.webp 1920w, /assets/img/facade-nuit-2560.webp 2560w"
+      sizes="100vw" width="2560" height="1440" fetchpriority="high"
+      alt="La résidence Les Airelles de nuit sous la neige, place de Venosc aux 2 Alpes" />
+    <!-- Desktop : vidéo de la station (lecteur YouTube, muet, en boucle) injectée par main.js -->
+    <div class="hero__overlay"></div>
+  </div>
+  <div class="hero__content">
+    <p class="hero__kicker">Place de Venosc · Les 2 Alpes · 1 650 m</p>
+    <h1>Sur cette place, il n'y avait jamais rien à vendre. <em>Jusqu'à aujourd'hui.</em></h1>
+    <p class="hero__sub">L'ancien hôtel Les Airelles, au cœur historique des 2 Alpes, devient une résidence de seulement onze appartements neufs. Bois, pierre, grandes baies sur les sommets — et les pistes à deux cents mètres.</p>
+    <ul class="hero__facts">
+      <li><strong>200 m</strong><span>des remontées</span></li>
+      <li><strong>9</strong><span>appartements disponibles</span></li>
+      <li><strong>525 000 €</strong><span>à partir de, HT</span></li>
+    </ul>
+    <button class="btn js-open-dossier" type="button">
+      Télécharger le dossier du projet
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M6 11l6 6 6-6M5 20h14"/></svg>
+    </button>
+    <p class="hero__status"><i></i>2 vendus · 1 sous offre, avant même le début des travaux</p>
+  </div>
+  <span class="mention3d-hero">Perspective 3D — image non contractuelle</span>
+</section>
+
+<!-- ============== CHIFFRES ============== -->
+<section class="figures" aria-label="La station en chiffres">
+  <ul class="wrap">
+    <li><strong>3 600 m</strong><span>Glacier</span></li>
+    <li><strong>200 km</strong><span>de pistes</span></li>
+    <li><strong>Juillet</strong><span>On skie jusqu'en</span></li>
+    <li><strong>17 min</strong><span>Jusqu'au glacier</span></li>
+  </ul>
+</section>
+
+<!-- ============== ART DE VIVRE ============== -->
+<section class="scene">
+  <img src="/assets/img/aube-sommets-1280.webp"
+    srcset="/assets/img/aube-sommets-828.webp 828w, /assets/img/aube-sommets-1280.webp 1280w, /assets/img/aube-sommets-1920.webp 1920w"
+    sizes="100vw" width="1920" height="1280" loading="lazy" decoding="async" alt="Lever du soleil sur les sommets enneigés des Alpes" />
+  <div class="wrap scene__text reveal">
+    <span class="eyebrow">L'art de vivre à la montagne</span>
+    <p class="big">Le matin, le silence. <em>Et les sommets pour vous seul.</em></p>
+    <p class="small">On ne vend pas des mètres carrés. On vend la neige, le bois, le feu, la bonne table, la famille réunie — et le calme du matin sur les sommets.</p>
+  </div>
+</section>
+
+<section class="scene">
+  <img src="/assets/img/poudreuse-1280.webp"
+    srcset="/assets/img/poudreuse-828.webp 828w, /assets/img/poudreuse-1280.webp 1280w, /assets/img/poudreuse-1920.webp 1920w"
+    sizes="100vw" width="1920" height="1440" loading="lazy" decoding="async" alt="Skieur dans la poudreuse entre les sapins enneigés" />
+  <div class="wrap scene__text reveal">
+    <p class="big">La première trace, <em>avant tout le monde.</em></p>
+    <p class="small">Les pistes à deux cents mètres de la porte. Plus de deux cents kilomètres de domaine, et un glacier où l'on skie de fin novembre à début juillet.</p>
+  </div>
+</section>
+
+<section class="tablee">
+  <div class="wrap">
+    <div class="tablee__head reveal">
+      <div>
+        <span class="eyebrow">Le soir venu</span>
+        <h2 class="h2">Le feu crépite. <em>La fondue fume.</em></h2>
+      </div>
+      <p class="lede">Une planche de charcuterie et de fromages, une raclette qui coule, un vin chaud entre les mains. Et soixante-dix restaurants au pied de la résidence, les soirs où personne ne veut cuisiner.</p>
+    </div>
+    <div class="mosaic reveal">
+      <figure class="m1">
+        <img src="/assets/img/feu-cheminee-1280.webp" srcset="/assets/img/feu-cheminee-828.webp 828w, /assets/img/feu-cheminee-1280.webp 1280w" sizes="(max-width: 760px) 100vw, 58vw" width="1280" height="853" loading="lazy" decoding="async" alt="Feu de bois dans une cheminée en pierre" />
+        <figcaption>Un feu qui crépite</figcaption>
+      </figure>
+      <figure class="m2">
+        <img src="/assets/img/fondue-828.webp" srcset="/assets/img/fondue-828.webp 828w, /assets/img/fondue-1280.webp 1280w" sizes="(max-width: 760px) 50vw, 42vw" width="828" height="552" loading="lazy" decoding="async" alt="Morceau de pain trempé dans une fondue au fromage" />
+        <figcaption>La fondue</figcaption>
+      </figure>
+      <figure class="m3">
+        <img src="/assets/img/raclette-828.webp" srcset="/assets/img/raclette-828.webp 828w, /assets/img/raclette-1280.webp 1280w" sizes="(max-width: 760px) 50vw, 42vw" width="828" height="552" loading="lazy" decoding="async" alt="Raclette qui coule sur des pommes de terre" />
+        <figcaption>La raclette</figcaption>
+      </figure>
+      <figure class="m4">
+        <img src="/assets/img/planche-828.webp" sizes="(max-width: 760px) 50vw, 33vw" width="828" height="552" loading="lazy" decoding="async" alt="Planche de charcuterie et de fromages" />
+        <figcaption>La planche</figcaption>
+      </figure>
+      <figure class="m5">
+        <img src="/assets/img/vin-chaud-828.webp" sizes="(max-width: 760px) 50vw, 33vw" width="828" height="552" loading="lazy" decoding="async" alt="Verres de vin chaud aux épices et à l'orange" />
+        <figcaption>Le vin chaud</figcaption>
+      </figure>
+      <figure class="m6">
+        <img src="/assets/img/chalet-feu-828.webp" srcset="/assets/img/chalet-feu-828.webp 828w, /assets/img/chalet-feu-1280.webp 1280w" sizes="(max-width: 760px) 100vw, 33vw" width="828" height="552" loading="lazy" decoding="async" alt="Intérieur de chalet en bois avec poêle allumé" />
+        <figcaption>Le bois, partout</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="scene">
+  <img src="/assets/img/terrasse-1280.webp"
+    srcset="/assets/img/terrasse-828.webp 828w, /assets/img/terrasse-1280.webp 1280w, /assets/img/terrasse-1920.webp 1920w"
+    sizes="100vw" width="1920" height="1080" loading="lazy" decoding="async" alt="Terrasse du dernier étage avec jacuzzi, face aux pistes enneigées" />
+  <div class="wrap scene__text reveal">
+    <p class="big">Un jacuzzi qui fume, <em>face aux pistes.</em></p>
+    <p class="small">La terrasse du dernier étage, telle qu'elle sera. Après la journée de ski, l'eau chaude, l'air froid, et la station qui s'allume en contrebas.</p>
+  </div>
+  <span class="mention3d" data-mention="Perspective 3D — image non contractuelle" style="position:absolute;inset:0;z-index:3;pointer-events:none"></span>
+</section>
+
+<section class="famille">
+  <div class="famille__img">
+    <img src="/assets/img/famille-neige-1280.webp" srcset="/assets/img/famille-neige-828.webp 828w, /assets/img/famille-neige-1280.webp 1280w, /assets/img/famille-neige-1920.webp 1920w" sizes="(max-width: 860px) 100vw, 52vw" width="1280" height="853" loading="lazy" decoding="async" alt="Une famille qui rit dans la neige" />
+  </div>
+  <div class="famille__text reveal">
+    <span class="eyebrow">Pour toute la famille</span>
+    <h2 class="h2">L'appartement où <em>tout le monde</em> se retrouve, chaque hiver.</h2>
+    <p class="lede">Jusqu'à huit couchages, un coin montagne avec des lits superposés pour les enfants, deux salles d'eau pour que personne n'attende le matin. Vos affaires restent sur place : vous arrivez, tout est prêt.</p>
+    <div><button class="btn js-open-dossier" type="button">Voir les plans dans le dossier</button></div>
+  </div>
+</section>
+
+<!-- ============== LE PROGRAMME ============== -->
+<section class="section" id="programme">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">Le programme</span>
+      <h2 class="h2">L'ancien hôtel de la place, <em>entièrement repensé.</em></h2>
+      <p class="lede">Les Airelles, c'est l'ancien hôtel de la place de Venosc, à deux cents mètres des remontées, transformé en une résidence de seulement onze appartements. Faites glisser pour voir la façade d'aujourd'hui devenir celle de demain.</p>
+    </div>
+
+    <div class="ba reveal" style="--pos: 50%">
+      <img src="/assets/img/facade-avant-1000.webp" srcset="/assets/img/facade-avant-828.webp 828w, /assets/img/facade-avant-1000.webp 1000w" sizes="(max-width: 1100px) 100vw, 1100px" width="1000" height="750" loading="lazy" decoding="async" alt="La façade actuelle de l'hôtel Les Airelles, en été" />
+      <img class="ba__after" src="/assets/img/facade-apres-1280.webp" srcset="/assets/img/facade-apres-828.webp 828w, /assets/img/facade-apres-1280.webp 1280w, /assets/img/facade-apres-1920.webp 1920w" sizes="(max-width: 1100px) 100vw, 1100px" width="1920" height="1440" loading="lazy" decoding="async" alt="La même façade rénovée en perspective 3D : surélévation, bois et pierre" />
+      <span class="ba__line"></span>
+      <span class="ba__tag ba__tag--before">Aujourd'hui</span>
+      <span class="ba__tag ba__tag--after">Demain</span>
+      <span class="mention3d" data-mention="Perspective 3D — image non contractuelle" style="position:absolute;inset:0;pointer-events:none"></span>
+      <input type="range" min="0" max="100" value="50" aria-label="Comparer la façade actuelle et la façade rénovée" />
+    </div>
+
+    <div class="prog__intro" style="margin-top: clamp(4rem, 8vw, 6rem)">
+      <div class="media mention3d reveal" data-mention="Perspective 3D — image non contractuelle">
+        <img src="/assets/img/facade-nuit-1280.webp" srcset="/assets/img/facade-nuit-828.webp 828w, /assets/img/facade-nuit-1280.webp 1280w, /assets/img/facade-nuit-1920.webp 1920w" sizes="(max-width: 860px) 100vw, 50vw" width="1280" height="720" loading="lazy" decoding="async" alt="La résidence Les Airelles de nuit, façade bois et pierre sous la neige" />
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">Le bâtiment</span>
+        <h3 class="h2" style="font-size: clamp(1.8rem, 3vw, 2.6rem)">Surélevé, une toiture neuve, des façades en <em>bois et en pierre.</em></h3>
+        <ul class="checks">
+          <li>11 appartements seulement, du 1<sup>er</sup> au 4<sup>e</sup> étage</li>
+          <li>Presque tous avec terrasse</li>
+          <li>Un casier à ski et une cave pour chaque appartement</li>
+          <li>Parking couvert juste en face</li>
+          <li>Restaurants et commerces au pied de l'immeuble</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="interior">
+      <figure class="i-big reveal">
+        <div class="view-insert mention3d" data-mention="Perspective 3D — image non contractuelle">
+          <img src="/assets/img/sejour-1280.webp" srcset="/assets/img/sejour-828.webp 828w, /assets/img/sejour-1280.webp 1280w, /assets/img/sejour-1920.webp 1920w, /assets/img/sejour-2560.webp 2560w" sizes="(max-width: 1240px) 100vw, 1200px" width="1920" height="1080" loading="lazy" decoding="async" alt="Séjour du dernier étage sous la charpente en bois, grande baie sur les sommets" />
+        </div>
+        <figcaption>Le séjour du dernier étage, sous la charpente : pierre naturelle, parquet en chêne, bois sculpté, et de grandes baies ouvertes sur les sommets.</figcaption>
+      </figure>
+      <figure class="i-half reveal">
+        <div class="mention3d" data-mention="Perspective 3D — image non contractuelle"><img src="/assets/img/chambre-1280.webp" srcset="/assets/img/chambre-828.webp 828w, /assets/img/chambre-1280.webp 1280w" sizes="(max-width: 860px) 100vw, 50vw" width="1280" height="720" loading="lazy" decoding="async" alt="Chambre avec vue sur un sommet enneigé" /></div>
+        <figcaption>Une chambre, le sommet dans la fenêtre.</figcaption>
+      </figure>
+      <figure class="i-half reveal">
+        <div class="mention3d" data-mention="Perspective 3D — image non contractuelle"><img src="/assets/img/coin-montagne-1280.webp" srcset="/assets/img/coin-montagne-828.webp 828w, /assets/img/coin-montagne-1280.webp 1280w" sizes="(max-width: 860px) 100vw, 50vw" width="1280" height="720" loading="lazy" decoding="async" alt="Coin montagne avec lits superposés en bois et baie vitrée" /></div>
+        <figcaption>Le coin montagne, pour les enfants.</figcaption>
+      </figure>
+    </div>
+
+    <div class="film reveal" id="film" data-video="bRAJIQWa1aw" data-start="44">
+      <img src="/assets/img/sejour-1280.webp" srcset="/assets/img/sejour-828.webp 828w, /assets/img/sejour-1280.webp 1280w, /assets/img/sejour-1920.webp 1920w" sizes="(max-width: 1240px) 100vw, 1200px" width="1920" height="1080" loading="lazy" decoding="async" alt="" />
+      <button type="button" class="js-play-film" aria-label="Lancer le film 3D du projet">
+        <span class="play"><svg width="26" height="26" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+        Visiter le projet en 3D
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============== LES APPARTEMENTS ============== -->
+<section class="section" id="appartements" style="background: var(--neige-2)">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Les appartements</span>
+      <h2 class="h2">Neuf appartements, <em>pour tous les projets.</em></h2>
+      <p class="lede">Des trois-pièces d'environ soixante mètres carrés, des quatre-pièces avec trois chambres, et de grands appartements familiaux jusqu'à cent quarante mètres carrés. Les plans complets sont dans le dossier.</p>
+      <div class="status">
+        <span class="sold"><i></i>2 vendus</span>
+        <span class="offer"><i></i>1 sous offre</span>
+        <span class="free"><i></i>9 disponibles</span>
+      </div>
+    </div>
+
+    <div class="lots">
+      <article class="lot reveal">
+        <div class="lot__plan"><img src="/assets/plans/lot-05-flou-640.webp" width="640" height="452" loading="lazy" decoding="async" alt="Plan flouté du lot 5" /><span>Plan complet dans le dossier</span></div>
+        <div class="lot__body">
+          <div class="lot__top"><h3>3 pièces</h3><small>Lot 5</small></div>
+          <dl><dt>Surface</dt><dd>76 m²</dd><dt>Étage</dt><dd>1<sup>er</sup></dd><dt>Exposition</dt><dd>Sud-ouest</dd><dt>Chambres</dt><dd>2 + 2 coins montagne</dd></dl>
+          <div class="lot__price"><strong>525 000 €</strong><span>HT</span></div>
+        </div>
+      </article>
+      <article class="lot reveal">
+        <div class="lot__plan"><img src="/assets/plans/lot-06-flou-640.webp" width="640" height="452" loading="lazy" decoding="async" alt="Plan flouté du lot 6" /><span>Plan complet dans le dossier</span></div>
+        <div class="lot__body">
+          <div class="lot__top"><h3>4 pièces</h3><small>Lot 6</small></div>
+          <dl><dt>Surface</dt><dd>70 m²</dd><dt>Étage</dt><dd>2<sup>e</sup></dd><dt>Exposition</dt><dd>Nord-ouest-est</dd><dt>Chambres</dt><dd>3 + 1 coin montagne</dd></dl>
+          <span class="lot__tag">Terrasse</span>
+          <div class="lot__price"><strong>620 000 €</strong><span>HT</span></div>
+        </div>
+      </article>
+      <article class="lot reveal">
+        <div class="lot__plan"><img src="/assets/plans/lot-07-flou-640.webp" width="640" height="452" loading="lazy" decoding="async" alt="Plan flouté du lot 7" /><span>Plan complet dans le dossier</span></div>
+        <div class="lot__body">
+          <div class="lot__top"><h3>3 pièces</h3><small>Lot 7</small></div>
+          <dl><dt>Surface</dt><dd>62 m²</dd><dt>Étage</dt><dd>2<sup>e</sup></dd><dt>Exposition</dt><dd>Sud-est</dd><dt>Chambres</dt><dd>2 + 1 coin montagne</dd></dl>
+          <div class="lot__price"><strong>600 000 €</strong><span>HT</span></div>
+        </div>
+      </article>
+      <article class="lot reveal">
+        <div class="lot__plan"><img src="/assets/plans/lot-08-flou-640.webp" width="640" height="452" loading="lazy" decoding="async" alt="Plan flouté du lot 8" /><span>Plan complet dans le dossier</span></div>
+        <div class="lot__body">
+          <div class="lot__top"><h3>4 pièces</h3><small>Lot 8</small></div>
+          <dl><dt>Surface</dt><dd>75 m²</dd><dt>Étage</dt><dd>2<sup>e</sup></dd><dt>Exposition</dt><dd>Sud-ouest</dd><dt>Chambres</dt><dd>3 + 1 coin montagne</dd></dl>
+          <span class="lot__tag">Terrasse sud 12 m²</span>
+          <div class="lot__price"><strong>670 000 €</strong><span>HT</span></div>
+        </div>
+      </article>
+      <article class="lot reveal">
+        <div class="lot__plan"><img src="/assets/plans/lot-09-flou-640.webp" width="640" height="452" loading="lazy" decoding="async" alt="Plan flouté du lot 9" /><span>Plan complet dans le dossier</span></div>
+        <div class="lot__body">
+          <div class="lot__top"><h3>4 pièces</h3><small>Lot 9</small></div>
+          <dl><dt>Surface</dt><dd>69 m²</dd><dt>Étage</dt><dd>3<sup>e</sup></dd><dt>Exposition</dt><dd>Nord-ouest-est</dd><dt>Chambres</dt><dd>3 + 1 coin montagne</dd></dl>
+          <span class="lot__tag">Terrasse</span>
+          <div class="lot__price"><strong>620 000 €</strong><span>HT</span></div>
+        </div>
+      </article>
+      <article class="lot reveal">
+        <div class="lot__plan"><img src="/assets/plans/lot-10-flou-640.webp" width="640" height="452" loading="lazy" decoding="async" alt="Plan flouté du lot 10" /><span>Plan complet dans le dossier</span></div>
+        <div class="lot__body">
+          <div class="lot__top"><h3>3 pièces bis</h3><small>Lot 10</small></div>
+          <dl><dt>Surface</dt><dd>59 m²</dd><dt>Étage</dt><dd>3<sup>e</sup></dd><dt>Exposition</dt><dd>Sud-est</dd><dt>Chambres</dt><dd>2 suites + 1 coin montagne</dd></dl>
+          <span class="lot__tag">Terrasse sud 8 m²</span>
+          <div class="lot__price"><strong>600 000 €</strong><span>HT</span></div>
+        </div>
+      </article>
+      <article class="lot reveal">
+        <div class="lot__plan"><img src="/assets/plans/lot-11-flou-640.webp" width="640" height="452" loading="lazy" decoding="async" alt="Plan flouté du lot 11" /><span>Plan complet dans le dossier</span></div>
+        <div class="lot__body">
+          <div class="lot__top"><h3>4 pièces</h3><small>Lot 11</small></div>
+          <dl><dt>Surface</dt><dd>75 m²</dd><dt>Étage</dt><dd>3<sup>e</sup></dd><dt>Exposition</dt><dd>Sud et ouest</dd><dt>Chambres</dt><dd>3 + 1 coin montagne</dd></dl>
+          <span class="lot__tag">Terrasse</span>
+          <div class="lot__price"><strong>655 000 €</strong><span>HT</span></div>
+        </div>
+      </article>
+      <article class="lot lot--star reveal">
+        <div class="lot__plan"><img src="/assets/plans/lot-12-flou-640.webp" width="640" height="452" loading="lazy" decoding="async" alt="Plan flouté du lot 12" /><span>Plan complet dans le dossier</span></div>
+        <div class="lot__body">
+          <div class="lot__top"><h3>Dernier étage</h3><small>Lot 12</small></div>
+          <dl><dt>Surface</dt><dd>140 m² (105 m² Carrez)</dd><dt>Étage</dt><dd>4<sup>e</sup></dd><dt>Exposition</dt><dd>Sud-est</dd><dt>Chambres</dt><dd>4, dont 2 suites</dd></dl>
+          <span class="lot__tag">Jacuzzi possible face aux pistes · 2 terrasses</span>
+          <div class="lot__price"><strong>1 150 000 €</strong><span>HT</span></div>
+        </div>
+      </article>
+      <article class="lot lot--star reveal">
+        <div class="lot__plan"><img src="/assets/plans/lot-13-flou-640.webp" width="640" height="452" loading="lazy" decoding="async" alt="Plan flouté du lot 13" /><span>Plan complet dans le dossier</span></div>
+        <div class="lot__body">
+          <div class="lot__top"><h3>Grand familial</h3><small>Lot 13</small></div>
+          <dl><dt>Surface</dt><dd>134 m²</dd><dt>Étage</dt><dd>3<sup>e</sup></dd><dt>Exposition</dt><dd>Sud-ouest-est</dd><dt>Chambres</dt><dd>5, dont 4 suites</dd></dl>
+          <span class="lot__tag">Sauna privatif · 2 terrasses</span>
+          <div class="lot__price"><strong>1 255 000 €</strong><span>HT</span></div>
+        </div>
+      </article>
+    </div>
+
+    <div class="lots__cta reveal">
+      <button class="btn js-open-dossier" type="button">Recevoir les plans et la simulation de TVA</button>
+      <p class="cta-note">Les appartements partent vite : deux sont déjà vendus et un autre est sous offre.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============== INVESTIR ============== -->
+<section class="section section--dark" id="investir">
+  <div class="wrap">
+    <div class="invest">
+      <div class="reveal">
+        <span class="eyebrow">Investir</span>
+        <h2 class="h2">Vous achetez hors taxes. <em>Et vous récupérez la TVA.</em></h2>
+        <p class="lede">L'appartement fonctionne avec des services, comme à l'hôtel : quand vous n'êtes pas là, une conciergerie le loue pour vous. En échange, vous achetez hors taxes — et vous gardez vos séjours quand vous voulez.</p>
+        <div class="bigfig">
+          <strong>124 000 €</strong>
+          <p>de TVA qui vous reviennent sur un appartement à 620 000 € HT. La simulation complète est dans le dossier.</p>
+        </div>
+      </div>
+      <ul class="invest__list reveal">
+        <li>
+          <h3>20 % de TVA récupérés</h3>
+          <p>Achat hors taxes, avec des frais de notaire réduits.</p>
+        </li>
+        <li>
+          <h3>Environ 27 000 € de revenus par an</h3>
+          <p>Pour un appartement à 620 000 €, loué par la conciergerie quand vous n'y êtes pas.</p>
+          <span class="fine">4,4 % nets de gestion · 3,4 % après charges</span>
+        </li>
+        <li>
+          <h3>Pas de bail commercial</h3>
+          <p>Ni gestionnaire imposé pour neuf ou onze ans, ni loyer renégocié à la baisse. Vous choisissez votre conciergerie, les loyers vous reviennent directement.</p>
+        </li>
+        <li>
+          <h3>+40 % en cinq ans</h3>
+          <p>La progression des prix dans une station qui vient d'investir près de 150 millions d'euros dans son nouveau téléphérique.</p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="compare reveal">
+      <div><small>Courchevel</small><strong>13 000 €/m²</strong></div>
+      <div><small>Les Airelles · Les 2 Alpes</small><strong>~8 000 €/m² HT</strong></div>
+    </div>
+    <p class="compare-note reveal">Et un glacier à 3 600 m, plus haut que tout le domaine des 3 Vallées.</p>
+
+    <div class="center reveal" style="margin-top: 3rem">
+      <button class="btn js-open-dossier" type="button">Recevoir la simulation de TVA</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============== SERVICE ============== -->
+<section class="section">
+  <div class="wrap service">
+    <div class="service__img reveal">
+      <img src="/assets/img/serviettes-1280.webp" srcset="/assets/img/serviettes-828.webp 828w, /assets/img/serviettes-1280.webp 1280w" sizes="(max-width: 860px) 100vw, 45vw" width="1280" height="853" loading="lazy" decoding="async" alt="Serviettes pliées sur un lit fait, comme à l'hôtel" />
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Sans jamais vous en occuper</span>
+      <h2 class="h2">Propriétaire à la montagne, <em>comme à l'hôtel.</em></h2>
+      <p class="lede">Pendant que vous profitez, d'autres s'occupent de tout. Et le jour où vous venez, l'appartement est prêt.</p>
+      <div class="service__grid">
+        <div><span class="num">01</span><h3>La conciergerie</h3><p>Réservations, accueil des locataires, ménage, linge.</p></div>
+        <div><span class="num">02</span><h3>L'expert-comptable</h3><p>Il récupère votre TVA et fait toutes vos déclarations, y compris si vous vivez à l'étranger.</p></div>
+        <div><span class="num">03</span><h3>Dans votre langue</h3><p>Une agence internationale vous accompagne pendant tout l'achat.</p></div>
+        <div><span class="num">04</span><h3>Vos séjours, quand vous voulez</h3><p>Vous gardez vos semaines. Le reste du temps, l'appartement travaille pour vous.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== LA STATION ============== -->
+<section class="section" id="station" style="padding-top: 0">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">Les 2 Alpes</span>
+      <h2 class="h2">Une station qui vit <em>presque toute l'année.</em></h2>
+      <p class="lede">L'une des grandes stations des Alpes françaises, en Isère. Le village à 1 650 m, le domaine jusqu'au glacier à 3 600 m — et la moitié des visiteurs qui viennent de l'étranger.</p>
+    </div>
+    <div class="seasons">
+      <article class="season reveal">
+        <img src="/assets/img/ski-glacier-1280.webp" srcset="/assets/img/ski-glacier-828.webp 828w, /assets/img/ski-glacier-1280.webp 1280w" sizes="(max-width: 860px) 100vw, 50vw" width="1280" height="853" loading="lazy" decoding="async" alt="Skieur dans la poudreuse en haute altitude" />
+        <div class="season__body">
+          <h3>L'hiver</h3>
+          <ul>
+            <li>Plus de 200 km de pistes, des débutants aux experts</li>
+            <li>Du ski de fin novembre à début juillet, grâce au glacier</li>
+            <li>La Grave et la Meije juste derrière : l'un des hors-piste les plus mythiques du monde</li>
+          </ul>
+        </div>
+      </article>
+      <article class="season reveal">
+        <img src="/assets/img/lac-ete-1280.webp" srcset="/assets/img/lac-ete-828.webp 828w, /assets/img/lac-ete-1280.webp 1280w" sizes="(max-width: 860px) 100vw, 50vw" width="1280" height="853" loading="lazy" decoding="async" alt="Lac de montagne en été, sommets en arrière-plan" />
+        <div class="season__body">
+          <h3>L'été</h3>
+          <ul>
+            <li>Les lacs et la randonnée dans le Parc national des Écrins</li>
+            <li>Un grand bike park et le VTT de descente</li>
+            <li>Le parapente au-dessus de la vallée</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+    <div class="station-strip">
+      <figure class="reveal">
+        <div><img src="/assets/img/telepherique-828.webp" srcset="/assets/img/telepherique-828.webp 828w, /assets/img/telepherique-1280.webp 1280w" sizes="(max-width: 860px) 100vw, 33vw" width="828" height="550" loading="lazy" decoding="async" alt="Cabine de téléphérique au-dessus des nuages" /></div>
+        <figcaption><strong>Le Jandri, 2025</strong>Un téléphérique tout neuf, près de 150 M€, qui monte au glacier en 17 minutes.</figcaption>
+      </figure>
+      <figure class="reveal">
+        <div><img src="/assets/img/vtt-828.webp" srcset="/assets/img/vtt-828.webp 828w, /assets/img/vtt-1280.webp 1280w" sizes="(max-width: 860px) 100vw, 33vw" width="828" height="552" loading="lazy" decoding="async" alt="Vététiste sur un rocher face aux sommets" /></div>
+        <figcaption><strong>Le bike park</strong>L'un des grands domaines VTT des Alpes, dès la fonte des neiges.</figcaption>
+      </figure>
+      <figure class="reveal">
+        <div><img src="/assets/img/village-aube-828.webp" srcset="/assets/img/village-aube-828.webp 828w, /assets/img/village-aube-1280.webp 1280w" sizes="(max-width: 860px) 100vw, 33vw" width="828" height="621" loading="lazy" decoding="async" alt="Village de station au pied d'un sommet enneigé, au lever du jour" /></div>
+        <figcaption><strong>Le village</strong>Environ 70 restaurants, des boutiques, des terrasses — tout à pied depuis la place.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============== ACCÈS ============== -->
+<section class="section section--dark">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">Accès</span>
+      <h2 class="h2">Plus près <em>que vous ne le pensez.</em></h2>
+      <p class="lede">Vous arrivez le samedi, vous garez la voiture au parking couvert en face, et vous la reprenez le jour du départ. Entre les deux, tout se fait à pied.</p>
+    </div>
+    <div class="access reveal">
+      <div><strong>1 h 30</strong><span>de Grenoble</span></div>
+      <div><strong>2 h</strong><span>de l'aéroport de Lyon-Saint-Exupéry</span></div>
+      <div><strong>200 m</strong><span>des remontées mécaniques, à pied</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FAQ ============== -->
+<section class="section">
+  <div class="wrap">
+    <div class="center reveal" style="margin-bottom: 2.5rem">
+      <span class="eyebrow">Questions fréquentes</span>
+      <h2 class="h2">Avant de <em>télécharger le dossier.</em></h2>
+    </div>
+    <div class="faq reveal">
+      <details>
+        <summary>Que contient le dossier du projet ?</summary>
+        <p>Les perspectives 3D, les plans de vente de chaque appartement disponible, la grille de prix et la simulation de récupération de TVA.</p>
+      </details>
+      <details>
+        <summary>Le projet est vendu sur plan : qu'est-ce que ça veut dire ?</summary>
+        <p>Les travaux n'ont pas encore commencé. Les images de l'intérieur sont des perspectives 3D, non contractuelles. C'est aussi le moment où le choix est le plus large : deux appartements sont déjà vendus et un est sous offre.</p>
+      </details>
+      <details>
+        <summary>Comment fonctionne la récupération de TVA ?</summary>
+        <p>L'appartement est exploité avec des services para-hôteliers : quand vous n'y êtes pas, une conciergerie le loue. En contrepartie, vous achetez hors taxes et récupérez les 20 % de TVA, avec des frais de notaire réduits. Vous gardez vos séjours quand vous voulez.</p>
+      </details>
+      <details>
+        <summary>J'habite à l'étranger, est-ce compliqué ?</summary>
+        <p>Non. Un expert-comptable spécialiste des non-résidents récupère votre TVA et fait vos déclarations en France, la conciergerie gère la location, et une agence internationale vous accompagne pendant tout l'achat, dans votre langue.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============== CTA FINAL ============== -->
+<section class="section final" id="dossier">
+  <img src="/assets/img/facade-nuit-1280.webp" srcset="/assets/img/facade-nuit-828.webp 828w, /assets/img/facade-nuit-1280.webp 1280w, /assets/img/facade-nuit-1920.webp 1920w" sizes="100vw" width="1920" height="1080" loading="lazy" decoding="async" alt="" />
+  <div class="wrap reveal">
+    <span class="eyebrow">Le dossier du projet</span>
+    <h2 class="h2">Ici, les appartements <em>partent vite.</em></h2>
+    <p class="lede">Deux sont déjà vendus et un autre est sous offre, avant même le début des travaux. Pour découvrir ceux qui restent, téléchargez le dossier du projet. Et pour la moindre question, nous y répondons personnellement.</p>
+    <ul class="dossier-list">
+      <li>Les 3D</li><li>Les plans</li><li>Les prix</li><li>La simulation de TVA</li>
+    </ul>
+    <button class="btn js-open-dossier" type="button">
+      Télécharger le dossier du projet
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M6 11l6 6 6-6M5 20h14"/></svg>
+    </button>
+  </div>
+  <span class="mention3d" data-mention="Perspective 3D — image non contractuelle" style="position:absolute;inset:0;z-index:3;pointer-events:none"></span>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div>
+      <strong>LES AIRELLES</strong>
+      <p>Place de Venosc, 38860 Les 2 Alpes. Résidence de 11 appartements neufs, vendus sur plan.</p>
+    </div>
+    <p>Perspectives 3D et photographies d'ambiance non contractuelles. Prix hors taxes, sous réserve de disponibilité. Rendements indicatifs, nets de gestion puis après charges, non garantis.</p>
+  </div>
+</footer>
+
+<!-- Bouton fixe mobile -->
+<div class="sticky-cta" id="stickyCta" aria-hidden="true">
+  <button class="btn js-open-dossier" type="button" tabindex="-1">Télécharger le dossier</button>
+</div>
+
+<!-- ============== MODALE DOSSIER ============== -->
+<div class="modal" id="dossierModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+  <div class="modal__backdrop js-close-modal"></div>
+  <div class="modal__panel">
+    <button class="modal__close js-close-modal" type="button" aria-label="Fermer">×</button>
+    <div class="modal__head">
+      <span class="eyebrow" style="color: var(--ambre)">Les Airelles aux 2 Alpes</span>
+      <h3 id="modalTitle">Le dossier du projet</h3>
+      <p>Les 3D, les plans, les prix et la simulation de TVA.</p>
+    </div>
+    <div class="modal__form" id="dossierForm">
+      <!-- ===== FORMULAIRE PRODIGIO OS =====
+           Coller ici le code d'intégration de l'écran « Formulaire acquéreur ».
+           Ne rien construire à la main : le formulaire vient du CRM. -->
+      <div class="form-pending">Formulaire en cours d'intégration.</div>
+    </div>
+  </div>
+</div>
+
+<script src="/main.js" defer></script>
+</body>
+</html>
