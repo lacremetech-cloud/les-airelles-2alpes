@@ -369,7 +369,8 @@ tr.star td{background:rgba(148,101,38,.08)}
   th:nth-child(5),td:nth-child(5){display:none}
   .final{min-height:80vh}
   .final__legal{position:static;margin-top:8mm}
-  .page-contact{bottom:9mm}
+  .page-contact{bottom:8mm;white-space:normal;text-align:center;line-height:1.4;width:max-content;max-width:calc(100% - 14mm);justify-content:center}
+  .brand-foot,.page-num{display:none}
   .nav-dots{display:none}
 }
 @media print{
