@@ -99,7 +99,7 @@ T = {
         "fin_eye": "La suite", "fin_h": "Un appartement <em>vous attend.</em>",
         "fin_body": "Choisissez votre lot, posez vos questions, réservez. Nous répondons personnellement, dans votre langue.",
         "fin_btn": "Nous contacter",
-        "fin_legal": "Document non contractuel · Perspectives 3D et photographies d'ambiance non contractuelles · Prix hors taxes, sous réserve de disponibilité · Rendements indicatifs non garantis.",
+        "fin_legal": "Document non contractuel · Perspectives 3D et photographies d'ambiance non contractuelles · Prix hors taxes, sous réserve de disponibilité · Rendements indicatifs non garantis · Photos de la station : G. Perréal, Rémih, DimiTalen (Wikimedia Commons).",
         "back": "Retour au site",
     },
     "en": {
@@ -157,7 +157,7 @@ T = {
         "rev_big": "≈ €27,000", "rev_big_l": "of rental income a year, for a €620,000 apartment",
         "rev_yield": "4.4% net of management · 3.4% after charges",
         "rev_points": [("The demand is there", "Half of the resort's visitors come from abroad, led by the British."), ("A four-season resort", "Skiing from late November to early July thanks to the glacier, then mountain biking, hiking, lakes."), ("No commercial lease", "You choose your concierge, and the rent comes straight to you."), ("+40% in five years", "Price growth in a resort investing nearly €150m in its new cable car.")],
-        "rev_note": "Indicative yields, not guaranteed.",
+        "rev_note": "Indicative yields, not guaranteed · Resort photos: G. Perréal, Rémih, DimiTalen (Wikimedia Commons).",
         "svc_eye": "Without lifting a finger", "svc_h": "Owning in the mountains, <em>the hotel way.</em>",
         "svc": [("The concierge", "Bookings, guest check-in, cleaning, linen. The day you arrive, the apartment is ready."), ("The accountant", "Recovers your VAT and files all your French returns, including for non-residents."), ("In your language", "An international agency guides you through the whole purchase."), ("Your stays", "Keep your weeks, whenever you like. The rest of the time, the apartment works for you.")],
         "st_eye": "Les 2 Alpes", "st_h": "A resort alive <em>almost all year round.</em>",
@@ -173,7 +173,7 @@ T = {
         "fin_eye": "Next steps", "fin_h": "An apartment <em>is waiting for you.</em>",
         "fin_body": "Choose your lot, ask your questions, reserve. We answer personally, in your language.",
         "fin_btn": "Contact us",
-        "fin_legal": "Non-contractual document · 3D renderings and lifestyle photographs are non-contractual · Prices excluding VAT, subject to availability · Indicative yields, not guaranteed.",
+        "fin_legal": "Non-contractual document · 3D renderings and lifestyle photographs are non-contractual · Prices excluding VAT, subject to availability · Indicative yields, not guaranteed · Resort photos: G. Perréal, Rémih, DimiTalen (Wikimedia Commons).",
         "back": "Back to the website",
     },
 }
@@ -502,7 +502,7 @@ def build(lang):
   <div class="photo persp" data-p="{P}"><img src="/assets/img/facade-apres-1280.webp" alt="" loading="lazy" /><span class="tag">{t["p2_after"]}</span></div>
 </div>
 <div class="cols"><p class="body">{t["p2_body"][0]}</p><p class="body">{t["p2_body"][1]}</p></div>
-<div class="photo" style="height:62mm;margin-top:2mm"><img src="/assets/img/station-ete-1000.webp" alt="" loading="lazy" /></div>''')
+<div class="photo" style="height:62mm;margin-top:2mm"><img src="/assets/img/2alpes-station-hiver-1280.webp" alt="" loading="lazy" /></div>''')
 
     # 3 — Chiffres
     stats = "".join(f'<div><strong>{a}</strong><span>{b}</span></div>' for a, b in t["p3_stats"])
@@ -610,7 +610,7 @@ def build(lang):
 <div class="big">{t["rev_big"]}</div><p class="bigl">{t["rev_big_l"]}</p>
 <div class="yield">{t["rev_yield"]}</div>
 <div class="pts">{pts}</div>
-<div class="photo" style="height:62mm;margin-top:8mm"><img src="/assets/img/village-aube-1280.webp" alt="" loading="lazy" /></div>
+<div class="photo" style="height:62mm;margin-top:8mm"><img src="/assets/img/2alpes-glacier-1280.webp" alt="" loading="lazy" /></div>
 <p class="note" style="color:rgba(246,242,234,.55)">{t["rev_note"]}</p>''', "page--dark")
 
     # Service
@@ -628,7 +628,7 @@ def build(lang):
 <h2 class="h2">{t["st_h"]}</h2><div class="rule"></div>
 <div class="stats" style="grid-template-columns:repeat(4,1fr);margin:3mm 0 4mm">{st}</div>
 <div class="seasons2">
-  <div><div class="photo"><img src="/assets/img/poudreuse-1280.webp" alt="" loading="lazy" /></div><div class="h3" style="margin-top:4mm">{t["st_winter_h"]}</div><ul>{w}</ul></div>
+  <div><div class="photo"><img src="/assets/img/2alpes-mer-nuages-1280.webp" alt="" loading="lazy" /></div><div class="h3" style="margin-top:4mm">{t["st_winter_h"]}</div><ul>{w}</ul></div>
   <div><div class="photo"><img src="/assets/img/lac-ete-1280.webp" alt="" loading="lazy" /></div><div class="h3" style="margin-top:4mm">{t["st_summer_h"]}</div><ul>{s}</ul></div>
 </div>
 <div class="photo" style="height:44mm;margin-top:5mm"><img src="/assets/img/telepherique-1280.webp" alt="" loading="lazy" /></div>''')
@@ -639,7 +639,7 @@ def build(lang):
 <h2 class="h2">{t["acc_h"]}</h2><div class="rule"></div>
 <div class="stats">{acc}</div>
 <p class="body">{t["acc_body"]}</p>
-<div class="photo" style="height:120mm;margin-top:6mm"><img src="/assets/img/ski-glacier-1920.webp" alt="" loading="lazy" /></div>''', "page--dark")
+<div class="photo" style="height:120mm;margin-top:6mm"><img src="/assets/img/2alpes-vallee-hiver-1920.webp" alt="" loading="lazy" /></div>''', "page--dark")
 
     # Calendrier
     cal = "".join(f'<div><strong>{a}</strong><span>{b}</span></div>' for a, b in t["cal"])
