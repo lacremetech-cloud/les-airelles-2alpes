@@ -674,15 +674,22 @@ em { font-style: italic; }
   transition: bottom 120ms linear;
 }
 
-/* Bandeau au-dessus du titre : « Les 2 Alpes · Immobilier d'exception » */
+/* Badge au-dessus du titre : « Les 2 Alpes · Immobilier d'exception » */
 .hero__kicker {
-  display: inline-flex; align-items: center; gap: 0;
-  padding: 0.5rem 0; margin-bottom: 1.4rem;
-  border-top: 1px solid rgba(226, 168, 92, 0.55);
-  border-bottom: 1px solid rgba(226, 168, 92, 0.55);
+  display: inline-flex; align-items: center; gap: 0.9rem;
+  padding: 0.55rem 1.1rem 0.55rem 0.6rem; margin-bottom: 1.6rem;
+  border: 1px solid rgba(226, 168, 92, 0.55); border-radius: 100px;
+  background: rgba(14, 20, 28, 0.38);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 8px 24px rgba(0, 0, 0, 0.25);
+  color: var(--neige); letter-spacing: 0.24em;
 }
-.hero__kicker span + span::before { content: ''; display: inline-block; width: 5px; height: 5px; margin: 0 0.9rem 0.15em; background: var(--ambre); transform: rotate(45deg); }
-.hero h1 { max-width: 13ch; }
+.hero__kicker span:first-child {
+  padding: 0.3rem 0.75rem; border-radius: 100px;
+  background: linear-gradient(135deg, #E2A85C, #B07A35); color: #14100A; font-weight: 500;
+}
+.hero__kicker span + span::before { content: none; }
+.hero h1 { max-width: none; font-size: clamp(2.5rem, 4.6vw, 4.4rem); }
 .hero__kicker span { white-space: nowrap; }
 .hero__facts strong { white-space: nowrap; }
 @media (max-width: 640px) {
@@ -744,3 +751,8 @@ em { font-style: italic; }
 .visite .film { margin-top: clamp(2rem, 4vw, 3rem); box-shadow: 0 30px 80px rgba(14, 20, 28, 0.25); }
 .visite .film img { opacity: 0.92; }
 @media (max-width: 640px) { .visite .film { margin-left: calc(-1 * var(--gutter)); margin-right: calc(-1 * var(--gutter)); border-radius: 0; } }
+@media (max-width: 640px) {
+  .hero h1 { font-size: clamp(2.05rem, 9.4vw, 2.6rem); }
+  .hero__kicker { gap: 0.6rem; padding: 0.4rem 0.8rem 0.4rem 0.4rem; }
+  .hero__kicker span:first-child { padding: 0.25rem 0.6rem; }
+}

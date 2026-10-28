@@ -86,10 +86,10 @@
           onReady: e => { e.target.mute(); e.target.playVideo(); },
           onStateChange: e => {
             const frame = player.getIframe();
-            if (e.data === YT.PlayerState.PLAYING) {
-              frame.classList.add('is-playing');
-              hero.classList.add('has-video');
-            }
+            // La vidéo n'est visible que pendant la lecture : en pause ou en
+            // chargement, YouTube affiche son icône — on montre alors l'image fixe.
+            frame.classList.toggle('is-playing', e.data === YT.PlayerState.PLAYING);
+            if (e.data === YT.PlayerState.PLAYING) hero.classList.add('has-video');
             // Boucle : on relance avant la fin pour ne jamais montrer l'écran de fin YouTube
             if (e.data === YT.PlayerState.ENDED) { player.seekTo(start); player.playVideo(); }
           }
