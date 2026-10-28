@@ -738,3 +738,9 @@ em { font-style: italic; }
   .btn::after { animation: none; display: none; }
   .btn:hover svg { transform: none; }
 }
+
+/* Visite 3D : section à part entière, juste après les chiffres clés */
+.visite { background: var(--neige-2); padding-bottom: clamp(3.5rem, 8vw, 6.5rem); }
+.visite .film { margin-top: clamp(2rem, 4vw, 3rem); box-shadow: 0 30px 80px rgba(14, 20, 28, 0.25); }
+.visite .film img { opacity: 0.92; }
+@media (max-width: 640px) { .visite .film { margin-left: calc(-1 * var(--gutter)); margin-right: calc(-1 * var(--gutter)); border-radius: 0; } }
