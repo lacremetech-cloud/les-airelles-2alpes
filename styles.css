@@ -880,3 +880,7 @@ em { font-style: italic; }
 .legal__body h2 { font-family: var(--serif); font-weight: 400; font-size: 1.5rem; margin: 2.2rem 0 0.6rem; }
 .legal__body p { line-height: 1.7; margin: 0 0 0.8rem; }
 .legal__body a { color: var(--miel); }
+
+/* ---------- Accueil : titre long sur une phrase ---------- */
+.hero h1 { font-size: clamp(2.1rem, 3.3vw, 3.3rem); line-height: 1.12; max-width: 22ch; }
+@media (max-width: 768px) { .hero h1 { font-size: clamp(1.75rem, 7.4vw, 2.1rem); } }
