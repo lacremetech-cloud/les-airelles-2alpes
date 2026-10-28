@@ -11,7 +11,8 @@ ROOT = Path(__file__).resolve().parent.parent
 
 # Lien de contact direct affiché sur chaque page (WhatsApp, Calendly…).
 # Vide = les boutons de contact sont masqués.
-CONTACT_URL = ""
+CONTACT_URL = "https://wa.me/33668680407"
+WA_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3.2.8.9-3.1-.2-.3c-.8-1.3-1.3-2.8-1.3-4.4C3.6 7.4 7.4 3.6 12 3.6s8.4 3.8 8.4 8.4-3.8 8.2-8.4 8.2z"/><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.4-.2-.6.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5 0-.2 0-.4-.1-.5l-.9-2.1c-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.3.3-1 .9-1 2.3s1 2.7 1.2 2.9c.1.2 2 3.1 5 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/></svg>'
 
 LOTS = [
     # n, type FR, type EN, m², étage, expo FR, expo EN, chambres FR, chambres EN, extra FR, extra EN, prix
@@ -33,9 +34,14 @@ T = {
         "floor": lambda n: "1<sup>er</sup> étage" if n == 1 else f"{n}<sup>e</sup> étage",
         "ht": "HT", "lot": "Lot", "surface": "Surface", "floor_l": "Étage", "expo": "Exposition", "rooms": "Couchages",
         "persp": "Perspective 3D — image non contractuelle",
-        "contact": "Une question ? Écrivez-nous",
+        "contact": "Une question ? Discutons sur WhatsApp",
         "prev": "Page précédente", "next": "Page suivante", "goto": "Aller à la page",
         "cover_kicker": "Dossier du projet · Édition 2026",
+        "cover_pill": "Les 2 Alpes · Isère · 1 650 m", "cover_brand": "Immobilier d'exception",
+        "cover_meta": "Brochure confidentielle · Document non contractuel",
+        "m_eye": "Bienvenue aux Airelles", "m_h": "Votre appartement premium <em>à 200 m des pistes.</em>",
+        "m_body": "Sur la place de Venosc, cœur historique des 2 Alpes, l'ancien hôtel Les Airelles devient une résidence de onze appartements neufs. Pierre naturelle, chêne, bois sculpté, et de grandes baies ouvertes sur les sommets.",
+        "m_stats": [("200 m", "des pistes"), ("11", "appartements"), ("3 600 m", "le glacier")],
         "cover_sub": "Onze appartements neufs sur la place de Venosc, à deux cents mètres des pistes. Les 2 Alpes, 1 650 m.",
         "cover_foot": ("Vendu sur plan", "Place de Venosc · 38860 Les 2 Alpes"),
         "p2_eye": "Le lieu", "p2_h": "La place où rien <em>n'était à vendre.</em>",
@@ -102,9 +108,14 @@ T = {
         "floor": lambda n: {1: "1st floor", 2: "2nd floor", 3: "3rd floor"}.get(n, f"{n}th floor"),
         "ht": "excl. VAT", "lot": "Lot", "surface": "Area", "floor_l": "Floor", "expo": "Aspect", "rooms": "Bedrooms",
         "persp": "3D rendering — non-contractual image",
-        "contact": "A question? Message us",
+        "contact": "A question? Chat with us on WhatsApp",
         "prev": "Previous page", "next": "Next page", "goto": "Go to page",
         "cover_kicker": "Project brochure · 2026 edition",
+        "cover_pill": "Les 2 Alpes · French Alps · 1,650 m", "cover_brand": "Exceptional real estate",
+        "cover_meta": "Confidential brochure · Non-contractual document",
+        "m_eye": "Welcome to Les Airelles", "m_h": "Your premium apartment, <em>200 m from the slopes.</em>",
+        "m_body": "On Place de Venosc, the historic heart of Les 2 Alpes, the former Hôtel Les Airelles becomes a residence of eleven new apartments. Natural stone, oak, carved wood, and wide picture windows onto the peaks.",
+        "m_stats": [("200 m", "from the slopes"), ("11", "apartments"), ("3,600 m", "the glacier")],
         "cover_sub": "Eleven new apartments on Place de Venosc, two hundred metres from the slopes. Les 2 Alpes, 1,650 m.",
         "cover_foot": ("Sold off-plan", "Place de Venosc · 38860 Les 2 Alpes · France"),
         "p2_eye": "The setting", "p2_h": "The square where nothing <em>was ever for sale.</em>",
@@ -168,9 +179,9 @@ T = {
 }
 
 CSS = r"""
-:root{--nuit:#0E141C;--bois:#12100E;--miel:#8C5F24;--cta:#8A5E25;--ambre:#E2A85C;--neige:#F7F4EF;--neige2:#EFEAE3;--encre:#1B1612;--gris:rgba(27,22,18,.62);--ligne:rgba(27,22,18,.14);--serif:'Cormorant Garamond','Times New Roman',serif;--sans:'Jost',-apple-system,sans-serif;--scale:1}
+:root{--nuit:#0E141C;--bois:#12100E;--miel:#8C5F24;--cta:#8A5E25;--ambre:#E2A85C;--neige:#FBFAF7;--neige2:#EFEAE3;--encre:#1B1612;--gris:rgba(27,22,18,.62);--ligne:rgba(27,22,18,.14);--serif:'Cormorant Garamond','Times New Roman',serif;--sans:'Jost',-apple-system,sans-serif;--scale:1}
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{background:#3a342d}
+html,body{background:#15171B}
 body{font-family:var(--sans);color:var(--encre);font-size:10.5pt;line-height:1.55;font-weight:300;padding:1.25rem 1rem 6rem;-webkit-font-smoothing:antialiased}
 img{display:block;max-width:100%}
 em{font-style:italic;color:var(--miel)}
@@ -194,22 +205,37 @@ em{font-style:italic;color:var(--miel)}
 .page-num::before{content:'';display:inline-block;width:6mm;height:1px;background:var(--miel);vertical-align:middle;margin-right:2.5mm}
 .brand-foot{position:absolute;bottom:10mm;left:18mm;font-family:var(--serif);font-size:9pt;letter-spacing:.2em;color:var(--gris)}
 .page--dark .brand-foot,.page--wood .brand-foot{color:rgba(246,242,234,.5)}
-.page-contact{position:absolute;bottom:8.5mm;left:50%;transform:translateX(-50%);display:inline-flex;align-items:center;gap:2mm;padding:2mm 4mm;background:var(--cta);color:#fff;font-size:7pt;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border-radius:100px;white-space:nowrap}
-.page-contact:hover{background:#7A5220}
+.page-contact{position:absolute;bottom:8.5mm;left:50%;transform:translateX(-50%);display:inline-flex;align-items:center;gap:2mm;padding:2.2mm 5mm;background:#25D366;color:#fff;font-size:7pt;letter-spacing:.14em;text-transform:uppercase;font-weight:500;text-decoration:none;border-radius:100px;white-space:nowrap;box-shadow:0 4px 12px rgba(37,211,102,.3);z-index:3}
+.page-contact:hover{background:#128C7E}
+.page-contact svg{width:3.6mm;height:3.6mm;fill:currentColor}
 /* Couverture */
 .cover{padding:0;color:#fff;background:var(--nuit);--miel:var(--ambre)}
 .cover>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.cover::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,20,28,.65) 0%,rgba(14,20,28,.1) 35%,rgba(14,20,28,.25) 60%,rgba(14,20,28,.92) 100%);z-index:1}
-.cover__c{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:space-between;padding:20mm 18mm 16mm}
-.cover__brand{font-family:var(--serif);font-size:13pt;letter-spacing:.32em}
-.cover__brand small{display:block;font-family:var(--sans);font-size:6.5pt;letter-spacing:.4em;opacity:.75;margin-top:1.5mm}
-.cover__kicker{font-size:7.5pt;letter-spacing:.34em;text-transform:uppercase;color:var(--ambre);margin-bottom:4mm}
-.cover h1{font-family:var(--serif);font-weight:300;font-size:58pt;line-height:.95}
-.cover h1 em{color:#fff}
-.cover__sub{font-size:11pt;max-width:120mm;margin-top:6mm;opacity:.9}
-.cover__title{margin-top:auto;margin-bottom:10mm}
-.cover__foot{display:flex;justify-content:space-between;border-top:1px solid rgba(255,255,255,.25);padding-top:4mm;font-size:7pt;letter-spacing:.24em;text-transform:uppercase;opacity:.75}
-.cover .persp-c{position:absolute;right:18mm;top:20mm;z-index:2;font-size:6pt;opacity:.7}
+.cover::before{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(10,12,16,.94) 0%,rgba(10,12,16,.45) 42%,rgba(10,12,16,.1) 68%,rgba(10,12,16,.55) 100%);z-index:1}
+.cover::after{content:'';position:absolute;inset:7mm;border:1px solid rgba(226,168,92,.45);z-index:2;pointer-events:none}
+.cover__c{position:relative;z-index:3;height:100%;display:flex;flex-direction:column;justify-content:space-between;padding:20mm 18mm 18mm}
+.cover__brand img{width:42mm;height:auto;display:block}
+.cover__brand small{display:block;font-size:6.8pt;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.75);margin-top:2mm}
+.cover__pill{display:inline-flex;align-items:center;gap:2.2mm;padding:2mm 4.5mm;border:1px solid rgba(226,168,92,.6);border-radius:100px;font-size:7.2pt;letter-spacing:.22em;text-transform:uppercase;margin-bottom:6mm}
+.cover__pill i{width:1.6mm;height:1.6mm;background:var(--ambre);transform:rotate(45deg)}
+.cover h1{font-family:var(--serif);font-weight:400;font-size:56pt;line-height:.95;letter-spacing:.02em;text-transform:uppercase}
+.cover h1 em{display:block;text-transform:none;font-weight:300;color:var(--ambre);font-size:.72em;letter-spacing:0;margin-top:2mm}
+.cover__sub{font-size:10.5pt;max-width:120mm;margin-top:6mm;color:rgba(255,255,255,.88)}
+.cover__meta{display:flex;justify-content:space-between;align-items:center;gap:6mm;margin-top:9mm;padding-top:4mm;border-top:1px solid rgba(255,255,255,.22);font-size:6.8pt;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.65)}
+.cover__wa{display:inline-flex;align-items:center;gap:1.8mm;color:#fff;text-decoration:none;letter-spacing:.14em}
+.cover__wa svg{width:3.6mm;height:3.6mm;fill:#25D366}
+.cover .persp-c{position:absolute;right:18mm;top:20mm;z-index:3;font-size:6pt;opacity:.7}
+/* Manifeste */
+.manif{padding:0}
+.manif__img{position:relative;height:168mm;overflow:hidden}
+.manif__img img{width:100%;height:100%;object-fit:cover}
+.manif__img::after{content:'';position:absolute;inset:auto 0 0 0;height:40%;background:linear-gradient(to top,var(--nuit),transparent)}
+.manif__c{padding:2mm 18mm 0}
+.manif .h2{font-size:30pt}
+.mstats{display:grid;grid-template-columns:repeat(3,1fr);margin-top:7mm;border-top:1px solid rgba(226,168,92,.35)}
+.mstats div{padding:5mm 0 0}
+.mstats strong{display:block;font-family:var(--serif);font-weight:300;font-size:26pt;line-height:1;color:var(--ambre);font-variant-numeric:lining-nums}
+.mstats span{display:block;margin-top:1.5mm;font-size:7pt;letter-spacing:.2em;text-transform:uppercase;color:rgba(246,242,234,.65)}
 /* Avant/après */
 .ba2{display:grid;grid-template-columns:1fr 1fr;gap:3mm;margin:6mm 0}
 .ba2 .photo{aspect-ratio:4/3}
@@ -311,6 +337,15 @@ tr.star td{background:rgba(148,101,38,.08)}
 .lang{position:fixed;top:1rem;right:1rem;z-index:1000;display:flex;gap:.3rem;background:rgba(14,20,28,.85);padding:.35rem .5rem;border-radius:100px;font-size:.7rem;letter-spacing:.16em}
 .lang a{color:#F6F2EA;text-decoration:none;padding:.2rem .45rem;opacity:.55}
 .lang a.is-active{opacity:1;color:var(--ambre)}
+/* Pages A4 : la dernière photo remplit l'espace libre jusqu'au pied de page */
+@media (min-width:907px){
+  .page.is-active:not(.cover){display:flex;flex-direction:column;padding-bottom:24mm}
+  .page>*{flex-shrink:0}
+  .page>.photo.grow,.page>.cols.grow{flex:1 1 0;min-height:30mm;height:auto!important}
+  .page>.cols.grow>.photo{height:100%!important}
+  .manif.is-active .manif__img{flex:1 1 0;height:auto;min-height:150mm}
+  .manif.is-active{padding-bottom:26mm}
+}
 /* Responsive : sous la largeur A4, les pages s'empilent */
 @media (max-width:906px){
   body{padding:0 0 6rem;font-size:10pt}
@@ -318,6 +353,10 @@ tr.star td{background:rgba(148,101,38,.08)}
   .cover{min-height:92vh;padding:0}
   .cover__c{min-height:92vh;padding:16mm 7mm 10mm}
   .cover .persp-c{top:auto;bottom:4mm;right:7mm}
+  .cover::after{inset:4mm}
+  .manif__img{height:62vw}
+  .manif__c{padding:2mm 7mm 0}
+  .cover__meta{flex-direction:column;align-items:flex-start}
   .cover h1{font-size:40pt}
   .h2{font-size:22pt}
   .cols,.ba2,.seasons2,.pts{grid-template-columns:1fr}
@@ -414,26 +453,45 @@ def build(lang):
     def contact():
         if not CONTACT_URL:
             return ""
-        return f'<a class="page-contact" href="{CONTACT_URL}" target="_blank" rel="noopener noreferrer">{t["contact"]} →</a>'
+        return f'<a class="page-contact" href="{CONTACT_URL}" target="_blank" rel="noopener noreferrer">{WA_SVG}{t["contact"]}</a>'
 
     def page(body, cls="", foot=True):
         num[0] += 1
+        # La dernière photo de la page s'étire pour remplir la page A4 jusqu'au pied
+        last = body.rstrip().splitlines()[-1] if body.strip() else ""
+        if cls not in ("cover", "manif") and last.startswith('<div class="cols"') and 'class="photo' in last:
+            k = body.rfind('<div class="cols"')
+            body = body[:k] + '<div class="cols grow"' + body[k + len('<div class="cols"'):]
+        else:
+            i = body.rfind('class="photo')
+            if i >= 0 and cls not in ("cover", "manif"):
+                body = body[:i] + 'class="photo grow' + body[i + len('class="photo'):]
         f = f'<div class="brand-foot">LES AIRELLES</div>{contact()}<div class="page-num">{num[0]:02d}</div>' if foot else ""
         active = " is-active" if num[0] == 1 else ""
         pages.append(f'<section class="page{(" " + cls) if cls else ""}{active}" data-page="{num[0]}">\n{body}\n{f}\n</section>')
 
     # 1 — Couverture
-    page(f'''<img src="/assets/img/facade-nuit-1920.webp" alt="" />
+    page(f'''<img src="/assets/img/facade-nuit-2560.webp" alt="" />
 <span class="persp-c">{P}</span>
 <div class="cover__c">
-  <div class="cover__brand">LES AIRELLES<small>AUX 2 ALPES</small></div>
+  <div class="cover__brand"><img src="/assets/brand/prodigio-blanc.png" alt="Prodigio" /><small>{t["cover_brand"]}</small></div>
   <div class="cover__title">
-    <div class="cover__kicker">{t["cover_kicker"]}</div>
-    <h1>Les Airelles<br /><em>aux 2 Alpes</em></h1>
+    <div class="cover__pill"><i></i>{t["cover_pill"]}</div>
+    <h1>Les Airelles<em>aux 2 Alpes</em></h1>
     <p class="cover__sub">{t["cover_sub"]}</p>
+    <div class="cover__meta"><span>{t["cover_meta"]}</span><a class="cover__wa" href="{CONTACT_URL}" target="_blank" rel="noopener noreferrer">{WA_SVG}WhatsApp</a></div>
   </div>
-  <div class="cover__foot"><span>{t["cover_foot"][0]}</span><span>{t["cover_foot"][1]}</span></div>
 </div>''', "cover", foot=False)
+
+    # 2 — Manifeste
+    ms = "".join(f'<div><strong>{a}</strong><span>{b}</span></div>' for a, b in t["m_stats"])
+    page(f'''<div class="manif__img persp" data-p="{P}"><img src="/assets/img/sejour-2560.webp" alt="" /></div>
+<div class="manif__c">
+  <div class="eyebrow">{t["m_eye"]}</div>
+  <h2 class="h2">{t["m_h"]}</h2>
+  <p class="body">{t["m_body"]}</p>
+  <div class="mstats">{ms}</div>
+</div>''', "page--dark manif")
 
     # 2 — Le lieu
     page(f'''<div class="eyebrow">{t["p2_eye"]}</div>
