@@ -191,6 +191,59 @@
     }
   });
 
+  /* ---------- Travelling lent sur les grandes images ---------- */
+  if ('IntersectionObserver' in window) {
+    const sceneIo = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('in-view'); sceneIo.unobserve(entry.target); }
+      });
+    }, { threshold: 0.2 });
+    document.querySelectorAll('.scene').forEach(el => sceneIo.observe(el));
+  }
+
+  /* ---------- Altimètre (desktop) : du village, 1 650 m, au glacier, 3 600 m ---------- */
+  const ALT_MIN = 1650, ALT_MAX = 3600;
+  if (window.matchMedia('(min-width: 1400px)').matches) {
+    const fmt = n => n.toLocaleString(isEn ? 'en-GB' : 'fr-FR') + ' m';
+    const pct = alt => ((alt - ALT_MIN) / (ALT_MAX - ALT_MIN)) * 100;
+    const alti = document.createElement('div');
+    alti.className = 'alti';
+    alti.setAttribute('aria-hidden', 'true');
+    let html = '<span class="alti__track"></span>';
+    for (let a = 1750; a < ALT_MAX; a += 250) html += `<span class="alti__tick" style="bottom:${pct(a)}%"></span>`;
+    const marks = [[ALT_MIN, isEn ? 'Village' : 'Village'], [3200, 'Jandri'], [ALT_MAX, isEn ? 'Glacier' : 'Glacier']];
+    marks.forEach(([a, name]) => {
+      html += `<span class="alti__tick alti__tick--major" style="bottom:${pct(a)}%"></span>`;
+      html += `<span class="alti__label" style="bottom:${pct(a)}%;transform:translateY(50%)">${name}</span>`;
+    });
+    html += '<span class="alti__mark"></span><span class="alti__read"></span>';
+    alti.innerHTML = html;
+    document.body.appendChild(alti);
+    const mark = alti.querySelector('.alti__mark');
+    const read = alti.querySelector('.alti__read');
+    const labels = alti.querySelectorAll('.alti__label');
+
+    let ticking = false;
+    const update = () => {
+      ticking = false;
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      const ratio = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+      const alt = Math.round((ALT_MIN + ratio * (ALT_MAX - ALT_MIN)) / 10) * 10;
+      const pos = `${ratio * 100}%`;
+      mark.style.bottom = pos;
+      read.style.bottom = pos;
+      read.textContent = fmt(alt);
+      // Le relevé courant remplace l'étiquette fixe qu'il recouvre
+      labels.forEach((l, i) => { l.style.opacity = Math.abs(pct(marks[i][0]) - ratio * 100) < 6 ? '0' : ''; });
+      alti.classList.toggle('is-on', window.scrollY > window.innerHeight * 0.6);
+    };
+    window.addEventListener('scroll', () => {
+      if (!ticking) { ticking = true; requestAnimationFrame(update); }
+    }, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  }
+
   /* ---------- Ancres : compense la nav fixe ---------- */
   document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', e => {

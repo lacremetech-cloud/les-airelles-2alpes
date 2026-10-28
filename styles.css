@@ -234,8 +234,15 @@ em { font-style: italic; }
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 var(--gutter) clamp(2.5rem, 7vh, 5rem);
-  animation: heroIn 0.9s var(--ease) both;
 }
+/* Entrée orchestrée : chaque ligne arrive à son tour */
+.hero__content > * { animation: heroIn 0.9s var(--ease) both; }
+.hero__content > :nth-child(1) { animation-delay: 0.05s; }
+.hero__content > :nth-child(2) { animation-delay: 0.18s; }
+.hero__content > :nth-child(3) { animation-delay: 0.38s; }
+.hero__content > :nth-child(4) { animation-delay: 0.52s; }
+.hero__content > :nth-child(5) { animation-delay: 0.66s; }
+.hero__content > :nth-child(6) { animation-delay: 0.8s; }
 .hero__kicker { font-size: 0.74rem; letter-spacing: 0.34em; text-transform: uppercase; color: var(--ambre); margin-bottom: 1.2rem; }
 .hero h1 { font-size: clamp(2.5rem, 6.4vw, 5.6rem); font-weight: 300; max-width: 15ch; text-shadow: 0 2px 30px rgba(0, 0, 0, 0.35); }
 .hero h1 em { font-weight: 400; color: #fff; }
@@ -581,7 +588,8 @@ em { font-style: italic; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .reveal { opacity: 1; transform: none; transition: none; }
-  .hero__poster, .hero__content { animation: none; }
+  .hero__poster, .hero__content > * { animation: none; }
+  .scene > img { transform: none !important; transition: none !important; }
 }
 
 /* ---------- Aperçu du dossier (lead magnet) ---------- */
@@ -606,3 +614,60 @@ em { font-style: italic; }
 .dossier-preview:hover .dp--plan { transform: translate(-120%, -48%) rotate(-12deg); }
 .dossier-preview:hover .dp--int { transform: translate(20%, -48%) rotate(11deg); }
 @media (prefers-reduced-motion: reduce) { .dp { transition: none; } }
+
+
+/* ============================================================
+   SIGNATURE — carnet d'alpinisme
+============================================================ */
+
+/* Grain argentique (desktop : l'overlay fixe reste léger pour le mobile) */
+@media (min-width: 769px) {
+  body::after {
+    content: '';
+    position: fixed; inset: 0; z-index: 150; pointer-events: none;
+    opacity: 0.06; mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .9 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  }
+}
+
+/* Courbes de niveau en filigrane dans les sections sombres */
+.figures, .section--dark, .tablee { position: relative; overflow: hidden; }
+.figures::before, .section--dark::before, .tablee::before {
+  content: '';
+  position: absolute; inset: -10% -5%;
+  background: url('/assets/topo.svg') center / cover no-repeat;
+  opacity: 0.09;
+  pointer-events: none;
+}
+.tablee::before { opacity: 0.06; }
+.figures > ul, .section--dark > .wrap, .tablee > .wrap { position: relative; z-index: 1; }
+
+/* Travelling lent sur les grandes images */
+.scene > img { transform: scale(1.09); transition: transform 7s cubic-bezier(.2, .6, .2, 1); will-change: transform; }
+.scene.in-view > img { transform: scale(1); }
+
+/* Altimètre : la page se lit comme une ascension, du village au glacier */
+.alti {
+  display: none;
+  position: fixed; right: 30px; top: 24vh; bottom: 24vh; width: 120px;
+  z-index: 80; pointer-events: none;
+  color: #fff; mix-blend-mode: difference;
+  opacity: 0; transition: opacity 600ms var(--ease);
+  font-family: var(--sans);
+}
+@media (min-width: 1400px) { .alti { display: block; } }
+.alti.is-on { opacity: 1; }
+.alti__track { position: absolute; right: 0; top: 0; bottom: 0; width: 1px; background: currentColor; opacity: 0.45; }
+.alti__tick { position: absolute; right: 0; width: 6px; height: 1px; background: currentColor; opacity: 0.6; }
+.alti__tick--major { width: 12px; opacity: 1; }
+.alti__label {
+  position: absolute; right: 18px; transform: translateY(-50%);
+  font-size: 0.58rem; letter-spacing: 0.22em; text-transform: uppercase; white-space: nowrap; opacity: 0.75;
+}
+.alti__mark { position: absolute; right: -4px; width: 9px; height: 9px; border-radius: 50%; background: currentColor; transform: translateY(50%); transition: bottom 120ms linear; }
+.alti__read {
+  position: absolute; right: 18px; transform: translateY(50%);
+  font-family: var(--serif); font-size: 1.05rem; white-space: nowrap;
+  font-variant-numeric: lining-nums tabular-nums;
+  transition: bottom 120ms linear;
+}
