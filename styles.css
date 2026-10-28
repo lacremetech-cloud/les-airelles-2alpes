@@ -671,3 +671,20 @@ em { font-style: italic; }
   font-variant-numeric: lining-nums tabular-nums;
   transition: bottom 120ms linear;
 }
+
+/* Bandeau au-dessus du titre : « Les 2 Alpes · Immobilier d'exception » */
+.hero__kicker {
+  display: inline-flex; align-items: center; gap: 0;
+  padding: 0.5rem 0; margin-bottom: 1.4rem;
+  border-top: 1px solid rgba(226, 168, 92, 0.55);
+  border-bottom: 1px solid rgba(226, 168, 92, 0.55);
+}
+.hero__kicker span + span::before { content: ''; display: inline-block; width: 5px; height: 5px; margin: 0 0.9rem 0.15em; background: var(--ambre); transform: rotate(45deg); }
+.hero h1 { max-width: 13ch; }
+.hero__kicker span { white-space: nowrap; }
+.hero__facts strong { white-space: nowrap; }
+@media (max-width: 640px) {
+  .hero__kicker { font-size: 0.6rem; letter-spacing: 0.12em; max-width: 100%; }
+  .hero__kicker span + span::before { margin: 0 0.6rem 0.15em; }
+  .hero__facts strong { font-size: 1.3rem; }
+}
