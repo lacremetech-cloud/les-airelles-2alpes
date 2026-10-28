@@ -117,13 +117,15 @@
   const film = document.getElementById('film');
   if (film) {
     film.querySelector('.js-play-film').addEventListener('click', () => {
-      const start = parseInt(film.dataset.start || '0', 10);
-      const iframe = document.createElement('iframe');
-      iframe.src = `https://www.youtube-nocookie.com/embed/${film.dataset.video}?autoplay=1&start=${start}&rel=0&modestbranding=1&playsinline=1`;
-      iframe.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
-      iframe.allowFullscreen = true;
-      iframe.title = isEn ? 'Les Airelles — 3D film of the project' : 'Les Airelles — film 3D du projet';
-      film.appendChild(iframe);
+      const video = document.createElement('video');
+      video.src = film.dataset.src;
+      video.controls = true;
+      video.autoplay = true;
+      video.playsInline = true;
+      video.preload = 'auto';
+      video.setAttribute('aria-label', isEn ? 'Les Airelles — 3D film of the project' : 'Les Airelles — film 3D du projet');
+      film.appendChild(video);
+      video.play().catch(() => {});
       film.querySelector('.js-play-film').remove();
     });
   }
