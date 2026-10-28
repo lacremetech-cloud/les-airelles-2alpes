@@ -840,3 +840,23 @@ em { font-style: italic; }
   .hero__grid .hero__sub { margin-top: 0.9rem; font-size: 0.95rem; }
   .hero__grid { gap: 1.4rem; padding-top: 5.6rem; }
 }
+
+/* ---------- Modale du dossier : deux colonnes sur ordinateur ---------- */
+.modal__form #prodigio-form { min-height: 380px !important; }
+.modal__perks, .modal__trust { display: none; }
+@media (min-width: 900px) {
+  .modal__panel { max-width: 940px; display: grid; grid-template-columns: 380px minmax(0, 1fr); }
+  .modal__head {
+    display: flex; flex-direction: column; justify-content: flex-end;
+    padding: 2.4rem 2.2rem; min-height: 100%;
+    background-image: url('/assets/img/facade-nuit-1280.webp'); background-position: center;
+  }
+  .modal__head::before { background: linear-gradient(180deg, rgba(14, 20, 28, 0.15) 0%, rgba(14, 20, 28, 0.55) 45%, rgba(14, 20, 28, 0.92) 100%); }
+  .modal__head h3 { font-size: 2.3rem; line-height: 1.1; margin-top: 0.4rem; }
+  .modal__perks { display: block; list-style: none; margin: 1.4rem 0 0; padding: 1.2rem 0 0; border-top: 1px solid rgba(255, 255, 255, 0.2); }
+  .modal__perks li { position: relative; padding-left: 1.5rem; margin: 0.55rem 0; font-size: 0.92rem; }
+  .modal__perks li::before { content: ''; position: absolute; left: 0; top: 0.45em; width: 0.7rem; height: 0.38rem; border-left: 1.5px solid var(--ambre); border-bottom: 1.5px solid var(--ambre); transform: rotate(-45deg); }
+  .modal__trust { display: block; margin: 1.2rem 0 0; font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; opacity: 0.7; }
+  .modal__form { display: flex; flex-direction: column; justify-content: center; padding: 2rem 2.2rem; }
+  .modal__close { border-color: rgba(18, 16, 14, 0.25); background: transparent; color: var(--bois); }
+}
