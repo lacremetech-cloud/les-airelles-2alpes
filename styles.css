@@ -276,7 +276,7 @@ em { font-style: italic; }
 
 /* ---------- Bandeau chiffres ---------- */
 .figures { background: var(--nuit); color: var(--neige); border-top: 1px solid var(--ligne-clair); }
-.figures ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); }
+.figures ul { list-style: none; margin: 0 auto; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); }
 .figures li { padding: 2.2rem 1rem; text-align: center; border-right: 1px solid var(--ligne-clair); }
 .figures li:last-child { border-right: 0; }
 .figures strong { display: block; font-family: var(--serif); font-weight: 300; font-size: clamp(2.2rem, 4vw, 3.4rem); line-height: 1; color: var(--ambre); }
