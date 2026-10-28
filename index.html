@@ -561,7 +561,26 @@
       <!-- ===== FORMULAIRE PRODIGIO OS =====
            Coller ici le code d'intégration de l'écran « Formulaire acquéreur ».
            Ne rien construire à la main : le formulaire vient du CRM. -->
-      <div class="form-pending">Formulaire en cours d'intégration.</div>
+      <iframe id="prodigio-form" src="https://go.prodigio.fr/bien/les-airelles-aux-2-alpes/interet" title="Demander la brochure" loading="lazy" style="width:100%;border:0;min-height:520px;display:block"></iframe>
+      <script>
+        window.addEventListener("message", function (e) {
+          var f = document.getElementById("prodigio-form");
+          if (!f || !e.data || e.source !== f.contentWindow) return;
+          if (e.data.type === "prodigio:buyer-form:height") {
+            if (typeof e.data.height !== "number" || e.data.height <= 0) return;
+            f.style.height = e.data.height + "px";
+            return;
+          }
+          if (e.data.type === "prodigio:buyer-form:brochure") {
+            // On ne se deplace que chez soi : jamais vers une origine tierce.
+            try {
+              var u = new URL(e.data.url, window.location.href);
+              if (u.origin !== window.location.origin) return;
+              window.location.href = u.href;
+            } catch (err) {}
+          }
+        });
+      </script>
     </div>
   </div>
 </div>
