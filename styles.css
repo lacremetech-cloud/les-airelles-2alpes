@@ -861,3 +861,22 @@ em { font-style: italic; }
   .modal__close { border-color: rgba(18, 16, 14, 0.25); background: transparent; color: var(--bois); }
 }
 .film .mention3d::after { top: 0.6rem; bottom: auto; }
+
+/* ---------- Accès : lieux à proximité ---------- */
+.proches { margin-top: clamp(2rem, 4vw, 3rem); text-align: center; }
+.proches ul { list-style: none; margin: 1rem 0 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem; }
+.proches li { display: inline-flex; align-items: baseline; gap: 0.6rem; padding: 0.55rem 1.1rem; border: 1px solid var(--ligne-clair); border-radius: 999px; font-size: 0.9rem; }
+.proches li strong { font-family: var(--serif); font-weight: 400; font-size: 1.1rem; color: var(--ambre); white-space: nowrap; }
+
+/* ---------- Pied de page : éditeur ; page des mentions légales ---------- */
+.footer .footer__legal { flex-basis: 100%; max-width: none; padding-top: 1rem; border-top: 1px solid var(--ligne-clair); }
+.footer a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.footer a:hover { color: var(--ambre); }
+.legal { background: var(--neige); }
+.legal__top { background: var(--nuit); padding: 1.2rem 0; }
+.legal__top .wrap { display: flex; align-items: center; justify-content: space-between; }
+.legal__back { color: var(--neige); font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; }
+.legal__body { max-width: 46rem; }
+.legal__body h2 { font-family: var(--serif); font-weight: 400; font-size: 1.5rem; margin: 2.2rem 0 0.6rem; }
+.legal__body p { line-height: 1.7; margin: 0 0 0.8rem; }
+.legal__body a { color: var(--miel); }
