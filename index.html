@@ -51,9 +51,9 @@
 <!-- ============== NAVIGATION ============== -->
 <header class="nav" id="nav">
   <div class="nav__inner">
-    <a href="#top" class="nav__brand" aria-label="Les Airelles aux 2 Alpes">
-      <strong>LES AIRELLES</strong>
-      <small>Aux 2 Alpes</small>
+    <a href="#top" class="nav__brand" aria-label="Prodigio — Les Airelles aux 2 Alpes">
+      <img src="/assets/brand/prodigio-blanc.png" width="1068" height="170" alt="Prodigio" />
+      <small>Immobilier d'exception</small>
     </a>
     <nav class="nav__links" aria-label="Navigation principale">
       <a href="#programme">Le programme</a>
@@ -94,13 +94,37 @@
     <!-- Desktop : vidéo de la station (lecteur YouTube, muet, en boucle) injectée par main.js -->
     <div class="hero__overlay"></div>
   </div>
-  <div class="hero__content">
-    <p class="hero__kicker"><span>Les 2 Alpes</span><span>Immobilier d'exception</span></p>
-    <h1>Votre appartement premium<br /> <em>à 200&nbsp;m des pistes.</em></h1>
-    <p class="hero__sub">Place de Venosc, au cœur des 2 Alpes. 11 appartements neufs, de 59 à 140 m².</p>
-    <button class="btn js-open-dossier" type="button"><span class="btn__texte">Télécharger le dossier du projet</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M6 11l6 6 6-6M5 20h14"/></svg>
-    </button>
-    <p class="hero__status"><i></i>4 vendus · 1 sous offre, avant même le début des travaux</p>
+  <div class="hero__content hero__grid">
+    <div class="hero__left">
+      <p class="hero__kicker"><span>Les 2 Alpes</span><span>Immobilier d'exception</span></p>
+      <div class="hero__name">Les Airelles</div>
+      <h1>Votre appartement premium<br />à <em>200&nbsp;m des pistes</em>.</h1>
+      <p class="hero__sub">Place de Venosc · 11 appartements neufs de 59 à 140 m² · De 525&nbsp;000&nbsp;€ à 1&nbsp;255&nbsp;000&nbsp;€ HT.</p>
+      <ul class="hero__features">
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Cœur historique des 2 Alpes · Remontées à 200 m</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Pierre, chêne et bois sculpté · Baies sur les sommets</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Achat hors taxes · 20 % de TVA récupérés</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Conciergerie : vos séjours restent libres</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>4 vendus · 1 sous offre · 6 encore disponibles</li>
+      </ul>
+      <a class="hero__visite js-goto-film" href="#visite">
+        <span class="hero__visite__rond" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span>
+        Visiter la résidence en 3D
+        <span class="hero__visite__tag">Film 3D</span>
+      </a>
+    </div>
+    <aside class="hero__card">
+      <div class="hero__card-eye">Dossier confidentiel</div>
+      <h2 class="hero__card-h">Recevoir le dossier complet</h2>
+      <p class="hero__card-lede">Plans, 3D, prix et simulation de TVA. Accès immédiat, sans engagement.</p>
+      <ul class="hero__card-perks">
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span><strong>Plans cotés</strong> des lots disponibles</span></li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span><strong>Prix</strong> et disponibilités à jour</span></li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span><strong>Simulation</strong> de récupération de TVA</span></li>
+      </ul>
+      <button class="btn btn--block js-open-dossier" type="button"><span class="btn__texte">Recevoir le dossier</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M12 5.5 18.5 12 12 18.5"/></svg></button>
+      <p class="hero__card-trust"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>100 % confidentiel · Aucun spam</p>
+    </aside>
   </div>
   <span class="mention3d-hero">Perspective 3D — image non contractuelle</span>
 </section>

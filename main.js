@@ -128,6 +128,16 @@
     });
   }
 
+  /* ---------- Bouton « Visiter en 3D » de l'accueil : défile et lance le film ---------- */
+  document.querySelectorAll('.js-goto-film').forEach(link => link.addEventListener('click', e => {
+    const target = document.getElementById('visite');
+    if (!target) return;
+    e.preventDefault();
+    window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 70, behavior: 'smooth' });
+    const play = document.querySelector('.js-play-film');
+    if (play) setTimeout(() => play.click(), 700);
+  }));
+
   /* ---------- Avant / après ---------- */
   document.querySelectorAll('.ba').forEach(ba => {
     const input = ba.querySelector('input');
