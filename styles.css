@@ -531,7 +531,7 @@ em { font-style: italic; }
 .final::before { content: ''; position: absolute; inset: 0; background: rgba(14, 20, 28, 0.7); z-index: 1; }
 .final .wrap { position: relative; z-index: 2; }
 .final .h2 { max-width: 20ch; margin-left: auto; margin-right: auto; }
-.final .lede { color: rgba(246, 242, 234, 0.82); }
+.final .lede { color: rgba(246, 242, 234, 0.82); margin-left: auto; margin-right: auto; }
 .dossier-list { list-style: none; padding: 0; margin: 2rem auto 2.4rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem 2rem; font-size: 0.82rem; letter-spacing: 0.18em; text-transform: uppercase; }
 .dossier-list li::before { content: '—'; color: var(--ambre); margin-right: 0.6rem; }
 
