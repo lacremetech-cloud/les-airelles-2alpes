@@ -884,3 +884,10 @@ em { font-style: italic; }
 /* ---------- Accueil : titre long sur une phrase ---------- */
 .hero h1 { font-size: clamp(2.1rem, 3.3vw, 3.3rem); line-height: 1.12; max-width: 22ch; }
 @media (max-width: 768px) { .hero h1 { font-size: clamp(1.75rem, 7.4vw, 2.1rem); } }
+
+/* ---------- Lots : prix et détails réservés au dossier ---------- */
+.lot dd.flou { filter: blur(5px); user-select: none; }
+.lot__price--lock { width: 100%; background: none; border: 0; border-top: 1px solid var(--ligne); cursor: pointer; font: inherit; color: inherit; text-align: left; }
+.lot__price--lock strong { filter: blur(7px); user-select: none; }
+.lot__price--lock span { color: var(--miel); font-weight: 500; }
+.lot__price--lock:hover span { text-decoration: underline; text-underline-offset: 3px; }
