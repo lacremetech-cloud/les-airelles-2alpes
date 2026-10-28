@@ -178,7 +178,17 @@
   document.querySelectorAll('.js-open-dossier').forEach(b => b.addEventListener('click', openModal));
   document.querySelectorAll('.js-close-modal').forEach(b => b.addEventListener('click', closeModal));
   document.addEventListener('keydown', e => {
-    if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+    if (!modal.classList.contains('is-open')) return;
+    if (e.key === 'Escape') { closeModal(); return; }
+    // Le focus clavier reste dans la modale tant qu'elle est ouverte
+    if (e.key === 'Tab') {
+      const focusables = [...modal.querySelectorAll('a[href], button, input, select, textarea, iframe, [tabindex]:not([tabindex="-1"])')]
+        .filter(el => !el.disabled && el.offsetParent !== null);
+      if (!focusables.length) return;
+      const first = focusables[0], last = focusables[focusables.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
   });
 
   /* ---------- Ancres : compense la nav fixe ---------- */
