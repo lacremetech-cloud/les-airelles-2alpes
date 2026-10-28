@@ -191,6 +191,14 @@
     }
   });
 
+  /* ---------- Reflet des CTA : seulement quand le bouton est à l'écran ---------- */
+  if ('IntersectionObserver' in window) {
+    const btnIo = new IntersectionObserver(entries => {
+      entries.forEach(e => e.target.classList.toggle('est-en-vue', e.isIntersecting));
+    });
+    document.querySelectorAll('.btn').forEach(b => btnIo.observe(b));
+  }
+
   /* ---------- Travelling lent sur les grandes images ---------- */
   if ('IntersectionObserver' in window) {
     const sceneIo = new IntersectionObserver(entries => {

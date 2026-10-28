@@ -1,19 +1,21 @@
 /* ============================================================
    LES AIRELLES AUX 2 ALPES — Landing
-   Rouge des 2 Alpes · blanc de neige · bleu de nuit
+   Doré · blanc de neige · bleu de nuit
 ============================================================ */
 
 :root {
   --nuit: #0E141C;
   --nuit-2: #16202B;
-  --bois: #170D10;
-  /* --miel : accent pour le texte. Carmin sur fond clair (7,1:1),
-     redéfini en rouge doux dans les sections sombres (7,2:1). */
-  --miel: #9E1F28;
-  --ambre: #E8867B;
-  /* Bouton principal : texte blanc à 7,8:1 */
-  --cta: #9E1F28;
-  --cta-hover: #84161F;
+  --bois: #12100E;
+  /* --miel : accent pour le texte. Bronze doré sur fond clair (4,98:1),
+     redéfini en or clair dans les sections sombres (8,8:1). */
+  --miel: #8C5F24;
+  --ambre: #E2A85C;
+  /* Bouton principal : dégradé or → bronze, texte blanc >= 4,7:1 sur tout le dégradé */
+  --cta: #8A5E25;
+  --cta-clair: #9A6A2C;
+  --cta-profond: #6F4A1B;
+  --cta-hover: #7A5220;
   --neige: #F7F4EF;
   --neige-2: #EFEAE3;
   --encre: #1B1612;
@@ -116,7 +118,7 @@ em { font-style: italic; }
   text-transform: uppercase;
   text-decoration: none;
   transition: background 220ms var(--ease), transform 220ms var(--ease), box-shadow 220ms var(--ease);
-  box-shadow: 0 10px 30px rgba(158, 31, 40, 0.3);
+  box-shadow: 0 10px 30px rgba(148, 101, 38, 0.3);
   min-height: 48px;
   touch-action: manipulation;
 }
@@ -252,7 +254,7 @@ em { font-style: italic; }
 .hero__facts strong { font-family: var(--serif); font-size: clamp(1.6rem, 2.6vw, 2.2rem); font-weight: 400; line-height: 1.1; }
 .hero__facts span { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.75; }
 .hero__status { display: inline-flex; align-items: center; gap: 0.6rem; font-size: 0.85rem; margin-top: 1.1rem; color: rgba(246, 242, 234, 0.85); }
-.hero__status i { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; background: var(--ambre); box-shadow: 0 0 0 4px rgba(232, 134, 123, 0.25); }
+.hero__status i { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; background: var(--ambre); box-shadow: 0 0 0 4px rgba(226, 168, 92, 0.25); }
 .hero .mention3d-hero { position: absolute; right: var(--gutter); bottom: 0.8rem; font-size: 0.62rem; letter-spacing: 0.06em; opacity: 0.7; }
 .hero.has-video .mention3d-hero { display: none; }
 
@@ -443,7 +445,7 @@ em { font-style: italic; }
 .lot dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 0.3rem 1rem; font-size: 0.9rem; }
 .lot dt { color: var(--gris); }
 .lot dd { margin: 0; text-align: right; }
-.lot__tag { align-self: flex-start; font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--bois); background: rgba(158, 31, 40, 0.16); padding: 0.3rem 0.6rem; }
+.lot__tag { align-self: flex-start; font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--bois); background: rgba(148, 101, 38, 0.16); padding: 0.3rem 0.6rem; }
 .lot__price { margin-top: auto; padding-top: 0.9rem; border-top: 1px solid var(--ligne); display: flex; justify-content: space-between; align-items: baseline; }
 .lot__price strong { font-family: var(--serif); font-size: 1.7rem; font-weight: 500; }
 .lot__price span { font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gris); }
@@ -472,7 +474,7 @@ em { font-style: italic; }
 .invest__list .fine { display: block; margin-top: 0.5rem; font-size: 0.8rem; color: var(--ambre); letter-spacing: 0.04em; }
 .compare { margin-top: clamp(3.5rem, 7vw, 5rem); display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--ligne-clair); }
 .compare div { padding: 2rem 1.6rem; text-align: center; }
-.compare div + div { border-left: 1px solid var(--ligne-clair); background: rgba(158, 31, 40, 0.08); }
+.compare div + div { border-left: 1px solid var(--ligne-clair); background: rgba(148, 101, 38, 0.08); }
 .compare small { display: block; font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; opacity: 0.7; }
 .compare strong { display: block; font-family: var(--serif); font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.6rem); margin-top: 0.4rem; }
 .compare div + div strong { color: var(--ambre); }
@@ -676,8 +678,8 @@ em { font-style: italic; }
 .hero__kicker {
   display: inline-flex; align-items: center; gap: 0;
   padding: 0.5rem 0; margin-bottom: 1.4rem;
-  border-top: 1px solid rgba(232, 134, 123, 0.55);
-  border-bottom: 1px solid rgba(232, 134, 123, 0.55);
+  border-top: 1px solid rgba(226, 168, 92, 0.55);
+  border-bottom: 1px solid rgba(226, 168, 92, 0.55);
 }
 .hero__kicker span + span::before { content: ''; display: inline-block; width: 5px; height: 5px; margin: 0 0.9rem 0.15em; background: var(--ambre); transform: rotate(45deg); }
 .hero h1 { max-width: 13ch; }
@@ -687,4 +689,52 @@ em { font-style: italic; }
   .hero__kicker { font-size: 0.6rem; letter-spacing: 0.12em; max-width: 100%; }
   .hero__kicker span + span::before { margin: 0 0.6rem 0.15em; }
   .hero__facts strong { font-size: 1.3rem; }
+}
+
+
+/* ============================================================
+   LE REFLET DES CTA (repris de villa-jeanjaures-cassis)
+   Un reflet étroit traverse le bouton toutes les 5,6 s, derrière le texte.
+   Il ne tourne que lorsque le bouton est à l'écran (main.js) et jamais
+   pour un visiteur qui demande moins d'animations.
+============================================================ */
+.btn {
+  position: relative; overflow: hidden; isolation: isolate;
+  background: linear-gradient(135deg, var(--cta-clair) 0%, var(--cta-profond) 100%);
+  border: 1px solid transparent;
+  box-shadow: 0 6px 18px rgba(111, 74, 27, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.22);
+  transition: background 180ms ease-out, transform 180ms ease-out, box-shadow 300ms ease-out;
+}
+.btn:hover {
+  background: linear-gradient(135deg, #A87634 0%, #7A5220 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 14px 32px rgba(111, 74, 27, 0.42), inset 0 1px 0 rgba(255, 255, 255, 0.28);
+}
+.btn:active { transform: translateY(1px); }
+.btn > * { position: relative; z-index: 1; }
+.btn svg { transition: transform 300ms ease-out; }
+.btn:hover svg { transform: translateY(3px); }
+.btn::after {
+  content: ""; position: absolute; z-index: 0;
+  top: -60%; bottom: -60%; left: 0; width: 46%;
+  background: linear-gradient(100deg,
+    rgba(255,255,255,0) 0%, rgba(255,255,255,.06) 22%, rgba(255,255,255,.22) 38%,
+    rgba(255,255,255,.50) 50%, rgba(255,255,255,.22) 62%, rgba(255,255,255,.06) 78%,
+    rgba(255,255,255,0) 100%);
+  transform: translate3d(-180%, 0, 0) skewX(-18deg);
+  pointer-events: none;
+  animation: btn-eclat 5.6s linear infinite;
+  animation-play-state: paused;
+}
+.btn.est-en-vue::after { animation-play-state: running; }
+@keyframes btn-eclat {
+  0%, 4% { transform: translate3d(-180%, 0, 0) skewX(-18deg); }
+  30%    { transform: translate3d(420%, 0, 0) skewX(-18deg); }
+  100%   { transform: translate3d(420%, 0, 0) skewX(-18deg); }
+}
+.btn--ghost { background: transparent; box-shadow: none; }
+.btn--ghost::after { display: none; }
+@media (prefers-reduced-motion: reduce) {
+  .btn::after { animation: none; display: none; }
+  .btn:hover svg { transform: none; }
 }
