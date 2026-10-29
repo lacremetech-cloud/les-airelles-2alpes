@@ -1,7 +1,36 @@
 {
   "trailingSlash": true,
   "headers": [
-    { "source": "/assets/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800, stale-while-revalidate=86400" }] },
-    { "source": "/(brochure|en/brochure)/(.*)", "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }] }
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800, stale-while-revalidate=86400"
+        }
+      ]
+    },
+    {
+      "source": "/(brochure|en/brochure)/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "les-airelles-2alpes.vercel.app"
+        }
+      ],
+      "destination": "https://les-airelles.prodigio.fr/:path*",
+      "permanent": true
+    }
   ]
 }
